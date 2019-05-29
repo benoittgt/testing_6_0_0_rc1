@@ -1,24 +1,60 @@
-# README
+# Derailed issue
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* `git clone`
+* `bundle`
+* `bundle exec derailed bundle:mem`
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+NoMethodError: private method `warn' called for nil:NilClass
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/activesupport-6.0.0.rc1/lib/active_support/deprecation/proxy_wrappers.rb:156:in `warn'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/activesupport-6.0.0.rc1/lib/active_support/deprecation/proxy_wrappers.rb:23:in `method_missing'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/activesupport-6.0.0.rc1/lib/active_support/deprecation/proxy_wrappers.rb:127:in `initialize'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/activesupport-6.0.0.rc1/lib/active_support/deprecation/proxy_wrappers.rb:10:in `new'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/activesupport-6.0.0.rc1/lib/active_support/deprecation/proxy_wrappers.rb:10:in `new'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0.rc1/lib/rails/source_annotation_extractor.rb:8:in `<top (required)>'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/derailed_benchmarks-1.3.5/lib/derailed_benchmarks/core_ext/kernel_require.rb:67:in `require'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/derailed_benchmarks-1.3.5/lib/derailed_benchmarks/core_ext/kernel_require.rb:67:in `block (2 levels) in <top (required)>'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/derailed_benchmarks-1.3.5/lib/derailed_benchmarks/core_ext/kernel_require.rb:49:in `measure_memory_impact'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/derailed_benchmarks-1.3.5/lib/derailed_benchmarks/core_ext/kernel_require.rb:63:in `block in <top (required)>'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/derailed_benchmarks-1.3.5/lib/derailed_benchmarks/core_ext/kernel_require.rb:16:in `require'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/activesupport-6.0.0.rc1/lib/active_support/dependencies.rb:302:in `block in require'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/activesupport-6.0.0.rc1/lib/active_support/dependencies.rb:268:in `load_dependency'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/activesupport-6.0.0.rc1/lib/active_support/dependencies.rb:302:in `require'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0.rc1/lib/rails/application/configuration.rb:7:in `<top (required)>'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/derailed_benchmarks-1.3.5/lib/derailed_benchmarks/core_ext/kernel_require.rb:67:in `require'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/derailed_benchmarks-1.3.5/lib/derailed_benchmarks/core_ext/kernel_require.rb:67:in `block (2 levels) in <top (required)>'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/derailed_benchmarks-1.3.5/lib/derailed_benchmarks/core_ext/kernel_require.rb:49:in `measure_memory_impact'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/derailed_benchmarks-1.3.5/lib/derailed_benchmarks/core_ext/kernel_require.rb:63:in `block in <top (required)>'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/derailed_benchmarks-1.3.5/lib/derailed_benchmarks/core_ext/kernel_require.rb:16:in `require'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/activesupport-6.0.0.rc1/lib/active_support/dependencies.rb:302:in `block in require'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/activesupport-6.0.0.rc1/lib/active_support/dependencies.rb:268:in `load_dependency'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/activesupport-6.0.0.rc1/lib/active_support/dependencies.rb:302:in `require'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/sprockets-rails-3.2.1/lib/sprockets/railtie.rb:18:in `<class:Application>'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/sprockets-rails-3.2.1/lib/sprockets/railtie.rb:15:in `<module:Rails>'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/sprockets-rails-3.2.1/lib/sprockets/railtie.rb:14:in `<top (required)>'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/derailed_benchmarks-1.3.5/lib/derailed_benchmarks/core_ext/kernel_require.rb:67:in `require'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/derailed_benchmarks-1.3.5/lib/derailed_benchmarks/core_ext/kernel_require.rb:67:in `block (2 levels) in <top (required)>'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/derailed_benchmarks-1.3.5/lib/derailed_benchmarks/core_ext/kernel_require.rb:49:in `measure_memory_impact'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/derailed_benchmarks-1.3.5/lib/derailed_benchmarks/core_ext/kernel_require.rb:63:in `block in <top (required)>'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/derailed_benchmarks-1.3.5/lib/derailed_benchmarks/core_ext/kernel_require.rb:16:in `require'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/activesupport-6.0.0.rc1/lib/active_support/dependencies.rb:302:in `block in require'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/activesupport-6.0.0.rc1/lib/active_support/dependencies.rb:268:in `load_dependency'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/activesupport-6.0.0.rc1/lib/active_support/dependencies.rb:302:in `require'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0.rc1/lib/rails/all.rb:21:in `block in <top (required)>'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0.rc1/lib/rails/all.rb:19:in `each'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0.rc1/lib/rails/all.rb:19:in `<top (required)>'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/derailed_benchmarks-1.3.5/lib/derailed_benchmarks/core_ext/kernel_require.rb:67:in `require'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/derailed_benchmarks-1.3.5/lib/derailed_benchmarks/core_ext/kernel_require.rb:67:in `block (2 levels) in <top (required)>'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/derailed_benchmarks-1.3.5/lib/derailed_benchmarks/core_ext/kernel_require.rb:49:in `measure_memory_impact'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/derailed_benchmarks-1.3.5/lib/derailed_benchmarks/core_ext/kernel_require.rb:63:in `block in <top (required)>'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/derailed_benchmarks-1.3.5/lib/derailed_benchmarks/core_ext/kernel_require.rb:16:in `require'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/derailed_benchmarks-1.3.5/bin/derailed:85:in `setup_bundler!'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/derailed_benchmarks-1.3.5/bin/derailed:66:in `block in <class:DerailedBenchmarkCLI>'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/thor-0.20.3/lib/thor/command.rb:27:in `run'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/thor-0.20.3/lib/thor/invocation.rb:126:in `invoke_command'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/thor-0.20.3/lib/thor.rb:387:in `dispatch'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/thor-0.20.3/lib/thor/base.rb:466:in `start'
+  /Users/bti/.rvm/gems/ruby-2.6.3/gems/derailed_benchmarks-1.3.5/bin/derailed:92:in `<top (required)>'
+  /Users/bti/.rvm/gems/ruby-2.6.3/bin/derailed:23:in `load'
+  /Users/bti/.rvm/gems/ruby-2.6.3/bin/derailed:23:in `<top (required)>'
+  ```
